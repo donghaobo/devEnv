@@ -130,6 +130,14 @@ nmap <C-a>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-a>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR> 
 nmap <C-a>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR> 
 nmap <C-a>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-a><C-a><C-a>s :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find s <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>g :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find g <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>c :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find c <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>t :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find t <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>e :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find e <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>f :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find f <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>i :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find i <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
+nmap <C-a><C-a><C-a>d :set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<CR> <BAR> :vert scs find d <C-R>=expand("<cword>")<CR><CR> <BAR> :set cscopequickfix=<CR> <BAR> :cope<CR>
 
 
 """"""""""""" key map timeouts
