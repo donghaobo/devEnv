@@ -20,3 +20,7 @@ syntax on
 nmap <C-a>o :TlistOpen<CR>
 nmap <C-a><C-a>o :TlistClose<CR>
 
+" jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
