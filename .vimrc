@@ -24,3 +24,5 @@ nmap <C-a><C-a>o :TlistClose<CR>
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+set backspace=indent,eol,start
+
