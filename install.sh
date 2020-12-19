@@ -10,7 +10,12 @@ RCFILE=${HOME}/.${SHELL}rc
 \cp -r ${dir}/.vim ${HOME}/.vim
 \cp -r ${dir}/.shellenv ${HOME}/.shellenv
 
-sed -i '/##DEVENV-ABCABCABC##/d' ${RCFILE} ## make sure not delete other config...
+if [[ $OSTYPE =~ "darwin" ]];then
+    # the bad mac shell ...
+    sed -i '' '/##DEVENV-ABCABCABC##/d' ${RCFILE}
+else
+    sed -i '/##DEVENV-ABCABCABC##/d' ${RCFILE}
+fi
 echo 'for f in ${HOME}/.shellenv/*;do if [ -x $f ];then . $f;fi;done ##DEVENV-ABCABCABC##' >> ${RCFILE}
 
 . ${RCFILE}
