@@ -13,6 +13,11 @@ RCFILE=${HOME}/.${SHELL}rc
 if [[ $OSTYPE =~ "darwin" ]];then
     # the bad mac shell ...
     sed -i '' '/##DEVENV-ABCABCABC##/d' ${RCFILE}
+    if [[ $SHELL =~ "zsh" ]];then
+        sed -i '' '/##BIND ARROW##/d' ${RCFILE}
+        echo 'bindkey ";5C" forward-word ##BIND ARROW##' >> ${RCFILE}
+        echo 'bindkey ";5D" backward-word ##BIND ARROW##' >> ${RCFILE}
+    fi
 else
     sed -i '/##DEVENV-ABCABCABC##/d' ${RCFILE}
 fi
