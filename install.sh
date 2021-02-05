@@ -8,7 +8,7 @@ RCFILE=${HOME}/.${SHELL}rc
 \cp ${dir}/.gdbinit ${HOME}/.gdbinit
 \cp ${dir}/.vimrc ${HOME}/.vimrc
 \cp -r ${dir}/.vim ${HOME}/.vim
-\cp -r ${dir}/.shellenv ${HOME}/.shellenv
+\cp -r ${dir}/.shellenv/* ${HOME}/.shellenv
 
 if [[ $OSTYPE =~ "darwin" ]];then
     # the bad mac shell ...
